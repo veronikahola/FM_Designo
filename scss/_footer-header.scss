@@ -1,0 +1,197 @@
+@use "var";
+
+.footer {
+
+    &__card {
+        background-color: var.$color-peach;
+        background-image: url(/assets/shared/desktop/bg-pattern-call-to-action.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        color: var.$color-white;
+        padding: 60px var.$spacer-s;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: -180px;
+        position: relative;
+        z-index: 1;
+
+
+        @media screen and (min-width: 700px) {
+            padding: 60px;
+            margin-bottom: -90px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 80px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: -80px;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+            flex-basis: 50%;
+        }
+    }
+
+    &__right {
+        flex-basis: auto;
+    }
+
+    &__black {
+        background-color: var.$color-black;
+        padding: 250px 0 60px 0;
+
+
+        @media screen and (min-width: 700px) {
+            padding: 160px 0 80px 0;
+        }
+
+        @media screen and (min-width: 1200px) {
+            padding: 130px 0 70px 0;
+        }
+    }
+
+    &__flex {
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+        margin-top: 60px;
+        color: var.$color-lightgrey;
+
+        @media screen and (min-width: 700px) {
+            flex-direction: row;
+            align-items: flex-end;
+            text-align: left;
+            gap: 0;
+            justify-content: space-between;
+        }
+    }
+
+    &__icons a {
+        padding: 8px;
+    }
+}
+
+
+.footer__left p {
+    margin: var.$spacer-s 0 var.$spacer-m 0;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var.$color-darkgrey;
+    }
+
+    &__logo {
+        border-bottom: 1px solid var.$color-darkgrey;
+        padding-bottom: 35px;
+        width: 200px;
+
+        &--header {
+            width: 200px;
+        }
+
+        @media screen and (min-width: 700px) {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+
+    &--header {
+        border-bottom: none;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        color: var.$color-white;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 2px;
+        display: block;
+        padding: 15px;
+        text-align: center;
+        line-height: 14px;
+
+        @media screen and (min-width: 700px) {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        &:first-child {
+            margin-top: 15px;
+
+            @media screen and (min-width: 700px) {
+                margin-top: 0;
+            }
+        }
+
+        &:hover {
+            color: var.$color-lightpeach;
+        }
+
+        &--header {
+            color: var.$color-darkgrey;
+            margin: 30px 0;
+            
+            @media screen and (min-width: 700px) {
+                margin: 60px 0;
+            }
+
+            &:last-child {
+                @media screen and (min-width: 700px) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &__hamburger .menu__item {
+        text-align: right;
+    }
+
+    &__right--hidden {
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
+    }
+}
+
+.hamburger {
+    &__icon {
+        padding: 40px 0 40px 40px;
+        cursor: pointer;
+        @media screen and (min-width: 700px) {
+            display: none;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
